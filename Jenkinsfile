@@ -16,7 +16,7 @@ node("image-builder") {
         /kaniko/executor \
           --context=`pwd` \
           --dockerfile=Dockerfile \
-          --destination=docker.io/careromspersonal/clock-trigger:latest
+          --destination=careromspersonal/clock-trigger:latest
       '''
     }
   }
