@@ -8,6 +8,10 @@ node("image-builder") {
         cat > "${HOME}/.config/containers/auth.json" <<< "$PODMAN_AUTH"
         chmod 600 "${HOME}/.config/containers/auth.json"
 
+        cat > "${HOME}/.config/containers/registries.conf" <<EOF
+unqualified-search-registries = ["docker.io"]
+EOF
+
         export REGISTRY_AUTH_FILE="${HOME}/.config/containers/auth.json"
       '''
     }
