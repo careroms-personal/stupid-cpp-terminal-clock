@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: careromspersonal/stupid-cpp-terminal-clock
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: "latest"
 
 imagePullSecrets: []
